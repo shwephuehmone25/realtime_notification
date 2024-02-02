@@ -20,3 +20,7 @@ Route::get('/', function () {
 
 Route::get('/send', [SendMessageController::class, 'index'])->name('send');
 Route::post('/postMessage', [SendMessageController:: class, 'sendMessage'])->name('postMessage');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
